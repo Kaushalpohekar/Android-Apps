@@ -19,7 +19,7 @@ test_datagen = ImageDataGenerator(rescale=1./255)
 
 # Load training set
 training_set = train_datagen.flow_from_directory(
-    'images/train',
+    './train',
     target_size=(64, 64),
     batch_size=32,
     class_mode='categorical'
@@ -27,7 +27,7 @@ training_set = train_datagen.flow_from_directory(
 
 # Load test set
 test_set = test_datagen.flow_from_directory(
-    'images/test',
+    './test',
     target_size=(64, 64),
     batch_size=32,
     class_mode='categorical'
